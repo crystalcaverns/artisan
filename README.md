@@ -1,6 +1,6 @@
 # Artisan
 
-Proxy updater for the Crystal Caverns Minecraft server, designed to autonomously update the central proxy of our network.
+Proxy updater for the Crystal Caverns Minecraft server, designed to autonomously update the proxy of our network.
 
 While this is a standalone plugin, it should not be used by anyone other than us, as it is specifically made just for Crystal Caverns.
 
