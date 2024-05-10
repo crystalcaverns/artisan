@@ -30,6 +30,8 @@ public class Artisan {
     }
     @Subscribe
     public void onProxyInitialization(ProxyInitializeEvent e) {
+        // get plugin object
+        Artisan plugin = this;
         // prepare config
         File config = new File("/home/container/plugins/artisan/config.yml");
         if (!config.exists()) {
@@ -46,7 +48,7 @@ public class Artisan {
             cache.mkdirs();
         }
         // register the main command
-        server.getCommandManager().register(Renovate.createBrigadierCommand(logger));
+        server.getCommandManager().register(Renovate.createBrigadierCommand(server, logger, plugin));
         // welcome message
         logger.atInfo().log("Utility Artisan protocol running, ready to update the proxy to a new version.");
         // yay, we're up and running!
